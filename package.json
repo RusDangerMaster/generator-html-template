@@ -22,10 +22,16 @@
   ],
   "repository": "bhht/generator-html-template",
   "dependencies": {
-    "yeoman-generator": "^0.18.0"
+    "yeoman-generator": "^5.0.0",
+    "@snyk/protect": "latest"
   },
   "engines": {
     "node": ">=0.10.0"
   },
-  "licenses": "MIT"
+  "licenses": "MIT",
+  "scripts": {
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
